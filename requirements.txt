@@ -1,7 +1,7 @@
-streamlit
-tensorflow
-pillow
-pandas
-matplotlib
-gtts
-numpy
+!pip install streamlit
+!pip install tensorflow-cpu==2.10.0
+!pip install pillow
+!pip install pandas
+!pip install matplotlib
+!pip install gtts
+!pip install numpy
