@@ -17,8 +17,10 @@ CLASS_NAMES = ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
 
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model(MODEL_PATH)
-
+    try:
+        return tf.keras.models.load_model(MODEL_PATH, compile=False)
+    except:
+        return tf.keras.models.load_model(MODEL_PATH, safe_mode=False, compile=False)
 model = load_model()
 
 if "history" not in st.session_state:
